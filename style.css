@@ -1,0 +1,634 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* padding and border are included in width and height */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff; /* #fff is shortcode for #ffffff, which is white */
+}
+
+/* new *//* remove decoration from any link and makes sure the whole element is linked */
+a{
+    text-decoration: none;
+    color: #fff;
+    display: block; /* block takes up full width of parent container */
+    width: 100%;
+}
+
+#header{
+    width: 100%; /* 100% of the parent container */
+    height: 100vh; /* full height of the viewport */
+}
+
+.container{
+    padding: 10px 10%; /* 10px from the top and bottom and 10% of width from the left and right */
+}
+
+nav{
+    display: flex;
+    align-items: center; /* aligns items in vertical axis (flex direction) */
+    justify-content: space-between; /* aligns items in horizontal axis (opposite to flex direction) */
+    flex-wrap: wrap;
+    border-bottom: 1px solid #fff;
+    position: fixed;
+    width: 80%;
+    z-index: 4;
+    background-color: rgba(0, 0, 0);
+    top: 0;
+}
+
+nav ul li{
+    display: inline-block; /* aligns blocks horizontally */
+    list-style: none; /* removes the list format */
+    margin: 10px 18px;
+}
+
+nav ul li a{
+    color: #fff;
+    padding: 0 2px;
+    text-decoration: none; /* removes underline */
+    font-size: 18px;
+    position: relative;
+}
+
+/* create a blue line under each link */
+nav ul li a::after{ /* :: pseudo-element let's you style a specific part of a selected element */
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(16, 148, 255);
+    position: absolute; /* calculates position relative to the nearest positioned ancestor */
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for that state */
+    width: 100%;
+}
+
+/* new */
+#home{
+    display: flex;
+}
+
+.header-text{
+    flex-basis: 60%;
+    margin-top: 10%;
+    font-size: 30px;
+}
+
+/* new */
+.features{
+    flex-basis: 40%;
+    margin-top: 228px;
+}
+
+/* new */
+.features h2{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+/* new */
+.stats{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 10px;
+    justify-items: center; /* justify-content is for flexbox only */
+    text-align: center;
+}
+
+/* new */
+.stats div{
+    width: 100%;
+    background: #262626;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+/* new */
+.stats p{
+    font-size: 36px;
+    padding-bottom: 15px;
+}
+
+/* new */
+.stats i{
+    font-size: 36px;
+}
+
+/* new */
+.stats p.subheading{
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+/* new */
+.header-text img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.5s cubic-bezier(.42,.09,.47,1.68); /* test values at cubic-bezier.com */
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+}
+
+/* new */
+.header-text img:hover{
+    transform: scale(1.6);
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 40px;
+}
+
+.header-text h1 span{
+    color: rgb(0, 183, 255);
+}
+
+/* new */
+@keyframes slideInLeft{ /* @keyframes specifies the animation code */
+    0%, 10%{
+        transform: translateX(-500px);
+    }
+    10%, 100%{
+        transform: translateX(0); /* pauses for 9 seconds until next iteration */
+    }
+}
+
+/* new */
+.header-text h1, .header-text p{
+    position: absolute;
+    z-index: 1;
+    animation: slideInLeft 10s infinite;
+}
+
+/* new */
+.stats div:hover{
+    background: rgb(0, 183, 255);
+    transform: scale(1.1);
+}
+
+/* -----------------about---------------------- */
+
+#about{
+    padding: 70px 0;
+    color: #dfdfdf;
+    /* color: #fff; */
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* new */
+.myinfobox {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* new */
+.myinfo {
+    background: #262626;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 48%;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.subtitle{
+    margin-bottom: 25px;
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 5px 0 20px; /* 20px top margin, 0px right and left margin and 40px bottom margin */
+}
+
+.tab-links{
+    color: #fff;
+    padding: 5px 5px;
+    margin: 20px 70px;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(0, 183, 255);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/* new */
+.tab-links:hover{
+    transform: scale(1.1);
+}
+
+/* new */
+.tab-links.active-link:hover{
+    transform: none;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-links.active-link::after{
+    background: rgb(0, 183, 255);
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.tab-contents ul li span{
+    color: rgb(0, 183, 255);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* -----------projects------------ */
+
+/* new */
+#projects{
+    padding: 80px 0;
+}
+
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    margin-top: 50px;
+}
+
+/* new */
+.projects-list > div{
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.5s;
+    height: 100%;
+}
+
+/* new */
+.projects-list > div > div{
+    transition: transform 0.5s;
+}
+
+/* new */
+.projects-list div img{
+    width: 100%; 
+    height: 200px;
+    object-fit: cover ; 
+    border-radius: 10px;
+    position: relative;
+}
+
+/* new */
+.projects-list div ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 5px 0;
+}
+
+/* new */
+.projects-list li.language{
+    display: inline;
+    list-style-type: none;
+    background: #ff004f;
+    margin: 5px 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: transform 0.2s;
+    cursor: default;
+}
+
+/* new */
+.projects-list li.skill{
+    display: inline;
+    list-style-type: none;
+    background: #0368ff;
+    margin: 5px 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: transform 0.2s;
+    cursor: default;
+}
+
+.projects-list li.skill:hover, .projects-list li.language:hover{
+    transform: scale(1.1);
+}
+
+.projects-list h2{
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* new */
+.projects-list > div > div:hover{
+    transform: translateY(-10px);
+}
+
+/* new */
+.projects-list img, .projects-list h2{
+    cursor: pointer;
+}
+
+/* new */
+.projects-list i{
+    display: none;
+}
+
+/* new */
+.projects-list div > div:hover i{
+    color: rgb(0, 183, 255);
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    background: #fff;
+    opacity: 0.85;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    z-index: 2;
+}
+
+/* --------------articles-------------- */
+
+#articles{
+    padding: 50px 0 20px;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* automatically adjusts the number of columns to fit the available space and fr is for fraction */
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* controls what happens to content too big to fit into an area */
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgb(0, 183, 255));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: rgb(0, 183, 255);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: -60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid rgb(0, 183, 255);
+    padding: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background:rgb(0, 183, 255);
+}
+
+/* -----------contact------------- */
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: rgb(0, 183, 255);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: rgb(0, 183, 255);
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* ------------css for small screens------------- */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){ /* @media begins a media query */
+    #header{
+        background-image: url(images/me_phone.png); /* image for phone */     
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: rgb(0, 183, 255);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2; /* defines stack order of an element (higher z is on top) */
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;      
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
