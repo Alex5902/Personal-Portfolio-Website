@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3fafea3ffb.js" crossorigin="anonymous"></script> <!--link to fontawesome-->
+</head>
+<body>
+    <!-- --------------home------------ -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo_v1.png" width="150px" height="auto" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i> <!-- cross icon for phone screen -->
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!-- menu bar for phone screen -->
+            </nav>
+            <div id="home">
+                <div class="header-text">
+                    <img src="images/me2.jpg">
+                    <p>Software Engineer</p>
+                    <h1>Hi, I'm<br><span>Alejandro Ito Aramendia</span></h1> <!--br is used for line breaks and span is used for inline styling--> 
+                </div>
+                <div class="features">                   
+                    <div class="stats">
+                        <div>
+                            <p class="subheading">Projects Completed</p>
+                            <p>6</p>
+                        </div>
+                        <div>
+                            <p class="subheading">Articles Written</p>
+                            <p>13</p>
+                        </div>
+                        <div>
+                            <p class="subheading">Coffees Consumed</p>
+                            <p>99+</p>
+                        </div>
+                        <div>
+                            <p class="subheading">Times Googled</p>
+                            <i class="fa-solid fa-infinity"></i>
+                        </div>
+                    </div>                                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/aboutme2.jpg" width="300" height="auto">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <div class="myinfobox">
+                        <div class="myinfo">
+                            <p>Hello there! I'm Alex from London, England.<br><br>I'm a 4th-year engineering student currently studying at Japan's famous Tohoku University.</p>
+                        </div>
+                        <div class="myinfo">
+                            <p>I aim to become a software engineer and continue to expand my skill set.</p>
+                            <br>
+                            <p>My hobbies include going to the gym, taekwondo, table tennis and badminton.</p>
+                        </div>
+                    </div>
+                    <div class=""></div>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab(event,'education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Problem Solving</span><br><br>This skill was best shown in my flashcard project where I tackled a broad set of functionalities. I broke down complex problems into manageable subtasks, which allowed me to then systematically integrate each solution and build a fully functional website.</li>
+                                <li><span>Communication</span><br><br>Through writing articles and teaching English, I have learnt to articulate and communicate my ideas effectively adjusting to the audience as needed.</li>
+                                <!-- <li><span>Work Ethic</span><br><br>While working part-time 14 hours a week, kick boxing 4 hours a week, playing badminton 4 hours a week, running 3 hours a week and going to the gym 9 hours a week, I have still been able to keep up with my studies as well as any extra programming I do on the side.</li> -->
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Junior Researcher (2023 - present)</span><br><br>Creating a GUI to automate the data processing and model creation of complex vector fluid flow from the bladder through collected datasets in MATLAB.</li>
+                                <li><span>English Teacher (2023 - present)</span><br><br>Teaching English to Japanese kids and adults of ages between 8 and 60+ at an English school in Japan.</li>
+                                <!-- <li><span>National Taipei Tech University PBL Competition (2023 Aug)</span><br><br>Designed and created robots that could identify and catch different coloured balls and throw them outside the desginated arena through the use of an arduino.</li> -->
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Tohoku University, Japan (2021 - 2025)</span><br><br>BEng in Mechanical and Aerospace Engineering</li>
+                                <li><span>King's London Maths School, UK (2019 - 2021)</span><br><br>A-Levels: Maths, Further Maths, Physics, Computer Science - A*AAA</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------projects------------------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle">Projects</h1>
+            <div class="projects-list">               
+                <div>
+                    <div>                 
+                        <h2>SRS Japanese Flashcard Website</h2>           
+                        <img src="images/homePage.png">
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>                        
+                    <ul>
+                        <li class="language">JavaScript</li>
+                        <li class="language">PostgreSQL</li>
+                        <li class="language">HTML / CSS</li>           
+                        <li class="skill">API Design and Integration</li>
+                        <li class="skill">Database management</li>
+                    </ul>
+                </div>
+                <div>
+                    <div>              
+                        <h2>Complex Vector Fluid Flow Analyser</h2>           
+                        <img src="images/vector2.png">
+                        <a href="reports\manual.pdf"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>                            
+                    <ul>
+                        <li class="language">MATLAB</li>
+                        <li class="skill">GUI design</li>
+                        <li class="skill">Logic</li>
+                        <li class="skill">Error handling</li>
+                        <li class="skill">Debugging</li>
+                    </ul>
+                </div>
+                <div>
+                    <div>
+                        <h2>Personal Portfolio Website</h2>                  
+                        <img src="images/mywebsite.png">
+                        <a href="https://github.com/Alex5902/Personal-Portfolio-Website.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                    <ul>
+                        <li class="language">JavaScript</li>
+                        <li class="language">HTML / CSS</li>
+                        <li class="skill">Frontend</li>
+                        <li class="skill">Web design</li>
+                    </ul>
+                </div>               
+                <div>
+                    <div>                 
+                        <h2>Chess Game</h2>           
+                        <img src="images/chess.png">
+                        <a href="https://github.com/Alex5902/Chess-Game.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>                        
+                    <ul>
+                        <li class="language">JavaScript</li>
+                        <li class="language">HTML / CSS</li>
+                        <li class="skill">Frontend</li>
+                        <li class="skill">Logic</li>
+                    </ul>
+                </div>
+                <div>
+                    <div>                 
+                        <h2>Simon Memory Game</h2>           
+                        <img src="images/simongame.png">
+                        <a href="https://github.com/Alex5902/Simon-Game.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>                        
+                    <ul>
+                        <li class="language">JavaScript</li>
+                        <li class="language">PostgreSQL</li>
+                        <li class="language">HTML / CSS</li>
+                        <li class="skill">Node.js</li>
+                        <li class="skill">REST API Integration</li>
+                    </ul>
+                </div>
+                <div> 
+                    <div>
+                        <h2>Calculator App</h2>                  
+                        <img src="images/calculator.png">
+                        <a href="https://github.com/Alex5902/Calculator.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                    <ul>
+                        <li class="language">JavaScript</li>
+                        <li class="language">HTML / CSS</li>
+                        <li class="skill">Frontend</li>
+                        <li class="skill">Debugging</li>
+                    </ul>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------articles------------- -->
+    <div id="articles">
+        <div class="container">
+            <h1 class="subtitle">My Articles</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/attention architecture.png">
+                    <div class="layer">
+                        <h3>Transformers</h3>
+                        <p>A complete guide to the transformer architecture.</p>
+                        <a href="https://medium.com/@alejandro.itoaramendia/attention-is-all-you-need-a-complete-guide-to-transformers-8670a3f09d02"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/fc layer.png">
+                    <div class="layer">
+                        <h3>CNNs</h3>
+                        <p>A complete guide explaining how convolutional neural networks work.</p>
+                        <a href="https://medium.com/@alejandro.itoaramendia/convolutional-neural-networks-cnns-a-complete-guide-a803534a1930"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://medium.com/@alejandro.itoaramendia" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- --------------contact------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i> alejandro.itoaramendia@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +44 7598807434 / +81 8044623974</p>
+                    <a href="#" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Alejandro Made by Alex</p>
+        </div>
+    </div>
+
+
+<script src="index.js"></script>
+   
+</body>
+</html>
