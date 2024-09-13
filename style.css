@@ -567,17 +567,37 @@ nav .fa-solid{
     display: none;
 }
 
-@media only screen and (max-width: 600px){ /* @media begins a media query */
+@media only screen and (max-width: 426px){ /* @media begins a media query */
+    .container{
+        padding: 10px 3%;
+    }
+ 
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+    
     #header{
-        background-image: url(images/me_phone.png); /* image for phone */     
+        height: auto;
+        margin-top: 10%;
     }
     .header-text{
-        margin-top: 100%;
-        font-size: 16px;
+        font-size: 20px;
+        flex-basis: 70%;
     }
     .header-text h1{
         font-size: 30px;
     }
+
+    .header-text img{
+        height: 80px;
+        width: 80px;
+    }
+
+    nav {
+        width: 95%;
+    }
+
     nav .fa-solid{
         display: block;
         font-size: 25px;
@@ -603,6 +623,40 @@ nav .fa-solid{
         left: 25px;
         cursor: pointer;
     }
+
+    .features {
+        width: 95%;
+        flex-basis: 30%;
+        margin-top: 43%;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+    }
+
+    .stats p.subheading{
+        padding-top: 20px;
+        font-size: 12px;
+    }
+
+    .stats p{
+        font-size: 30px;
+    }
+
+    .stats i{
+        font-size: 32px;
+    }
+
+/* --------------------------------about me------------------------------ */
+
+    #about img{
+        width: 100%;
+        padding: 40px 0;
+    }
+
     .subtitle{
         font-size: 40px;
     }
@@ -614,16 +668,76 @@ nav .fa-solid{
     }
     .about-col-2{
         font-size: 14px;
+        width: 50%;
     }
+
+    .myinfobox p{
+        font-size: 15px;
+    }
+
     .tab-links{
-        font-size: 16px;
-        margin-right: 20px;      
+        font-size: 18px;
+        margin: 10px 6%;
     }
+
+    .tab-contents ul li{
+        font-size: 15px;
+    }
+
+    .tab-contents ul li span{
+        font-size: 20px;
+    }
+
+/* -----------------------projects------------------ */
+
+    #projects{
+        padding: 20px 0;
+    }
+
+    .projects-list{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+/* ------------------article-------------- */
+
+    #article{
+        padding: 20px 0;
+    }
+
+
+/* -------------------contact-------------- */
+
+    form .btn2{
+        padding: 10px 40px;
+        font-size: 18px;
+        margin: 30px 0;
+        cursor: pointer;
+    }
+
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
     .copyright{
         font-size: 14px;
+        padding: 15px 15px;
+    }
+
+    form input, form textarea{
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: #262626;
+        padding: 15px;
+        margin: 8px 0;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+
+    .btn{
+        margin: 30px auto 10px;
     }
 }
 
