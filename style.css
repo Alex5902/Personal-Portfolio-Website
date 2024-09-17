@@ -567,9 +567,546 @@ nav .fa-solid{
     display: none;
 }
 
-@media only screen and (max-width: 431px){ /* @media begins a media query */
+@media only screen and (min-width: 1248px) and (max-width: 1445px){
     .container{
         padding: 10px 3%;
+    }
+
+    nav {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1248px){
+
+    .container{
+        padding: 10px 3%;
+    }
+
+    nav {
+        width: 95%;
+    }
+
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #home .header-text{
+        flex-basis: 50%;
+        margin-top: 7%;
+    }
+
+    .features {
+        width: 100%;
+        flex-basis: 50%;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+    }
+
+    .stats p.subheading{
+        padding-top: 20px;
+        font-size: 20px;
+    }
+
+    .stats p{
+        font-size: 30px;
+    }
+
+/* ----------------------------about me-------------------- */
+
+    #about{
+        padding: 50px 0 10px;
+    }
+
+    .about-col-1{
+        flex-basis: 30%;
+    }
+
+    .about-col-1 img{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .about-col-2{
+        width: 68%;
+        flex-basis: 65%;
+    }
+    
+    .tab-titles{
+        margin: 5px 0 20px;
+    }
+    
+    .tab-links{
+        margin: 10px 60px;
+    }
+
+
+/* ---------------------projects------------------- */
+
+    #projects{
+        padding: 0 0 50px;
+    }
+
+    .projects-list{
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1024px){
+    .container{
+        padding: 10px 3%;
+    }
+
+    #header{
+        height: 100%;
+    }
+
+    nav {
+        width: 95%;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: rgb(0, 183, 255);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2; /* defines stack order of an element (higher z is on top) */
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features {
+        width: 100%;
+        flex-basis: 50%;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+    }
+
+    .stats p.subheading{
+        padding-top: 20px;
+        font-size: 17px;
+    }
+
+/* -----------about me---------------- */
+
+    #about{
+        padding: 50px 0 40px;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-col-1 {
+        flex-basis: 100%;
+        width: 100%;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-col-1 img{
+        width: 70%;
+    }
+
+    .about-col-2{
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+
+
+/* -----------------projects------------- */
+
+    #projects{
+        padding: 0 0 50px;
+    }
+
+    .projects-list{
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+
+}
+
+@media only screen and (min-width: 550px) and (max-width: 750px){
+    .container{
+        padding: 10px 3%;
+    }
+
+    .subtitle{
+        text-align: center;
+    }
+ 
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-text h1{
+        font-size: 44px;
+    }
+
+    .header-text p{
+        font-size: 28px;
+    }
+
+    .header-text img{
+        margin-top: 25px;
+        width: 100px;
+        height: 100px;
+    }
+
+    nav {
+        width: 95%;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: rgb(0, 183, 255);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2; /* defines stack order of an element (higher z is on top) */
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features {
+        width: 100%;
+        flex-basis: 50%;
+        margin-top: 40%;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+    }
+
+    .stats p.subheading{
+        padding-top: 20px;
+        font-size: 17px;
+    }
+
+    .stats > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .stats i{
+        padding-bottom: 20px;
+    }
+
+/* ---------------------------about me------------------- */
+
+    #about{
+        padding: 50px 0 40px;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-col-1 {
+        flex-basis: 100%;
+        width: 100%;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-col-1 img{
+        width: 70%;
+    }
+
+    .about-col-2{
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .myinfobox{
+        margin: 35px 0 15px;
+    }
+
+    .tab-titles{
+        display: flex;
+        justify-content: center;
+    }
+
+    .tab-links{
+        margin: 10px 6%;
+        font-size: 22px;
+    }
+
+    .myinfo{
+        font-size: 16px;
+    }
+
+    .tab-contents ul li{
+        font-size: 16px;
+    }
+
+/* ------------------------projects------------------- */
+
+    #projects{
+        padding: 0 0 50px;
+    }
+
+    .projects-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-list > div{
+        width: 80%;
+    }
+
+/* ---------------articles---------------- */
+
+    .work-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 550px){
+    .container{
+        padding: 10px 3%;
+    }
+    
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-text h1{
+        font-size: 32px;
+    }
+
+    .header-text p{
+        font-size: 22px;
+    }
+
+    .header-text img{
+        margin-top: 25px;
+        width: 100px;
+        height: 100px;
+    }
+
+    nav {
+        width: 95%;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: rgb(0, 183, 255);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2; /* defines stack order of an element (higher z is on top) */
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features {
+        width: 100%;
+        flex-basis: 50%;
+        margin-top: 45%;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+    }
+
+    .stats p.subheading{
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+    .stats > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .stats i{
+        padding-bottom: 20px;
+    }
+
+/* ---------------------------about me------------------- */
+
+    #about{
+        padding: 50px 0 40px;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-col-1 {
+        flex-basis: 100%;
+        width: 100%;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-col-1 img{
+        width: 70%;
+    }
+
+    .about-col-2{
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .tab-titles{
+        display: flex;
+        justify-content: center;
+    }
+
+    .tab-links{
+        margin: 10px 6%;
+        font-size: 22px;
+    }
+
+    .myinfo{
+        font-size: 16px;
+    }
+
+    .tab-contents ul li{
+        font-size: 16px;
+    }
+
+/* ------------------------projects------------------- */
+
+    #projects{
+        padding: 0 0 50px;
+    }
+
+    .projects-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-list > div{
+        width: 90%;
+    }
+
+/* ---------------articles---------------- */
+
+    .subtitle{
+        text-align: center;
+    }
+
+    .work-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 450px){ /* @media begins a media query */
+    .container{
+        padding: 10px 3%;
+    }
+
+    .subtitle{
+        text-align: center;
     }
  
     #home{
@@ -651,6 +1188,9 @@ nav .fa-solid{
     }
 
 /* --------------------------------about me------------------------------ */
+    #about{
+        padding: 70px 0 10px;
+    }
 
     #about img{
         width: 100%;
