@@ -28,7 +28,7 @@ a{
 }
 
 .container{
-    padding: 10px 10%; /* 10px from the top and bottom and 10% of width from the left and right */
+    padding: 10px 7%; /* 10px from the top and bottom and 10% of width from the left and right */
 }
 
 nav{
@@ -38,7 +38,7 @@ nav{
     flex-wrap: wrap;
     border-bottom: 1px solid #fff;
     position: fixed;
-    width: 80%;
+    width: 85%;
     z-index: 4;
     background-color: rgba(0, 0, 0);
     top: 0;
@@ -926,7 +926,7 @@ nav .fa-solid{
     }
 
     .projects-list > div{
-        width: 80%;
+        width: 70%;
     }
 
 /* ---------------articles---------------- */
@@ -939,7 +939,7 @@ nav .fa-solid{
     }
 
     .work {
-        width: 80%;
+        width: 70%;
     }
 }
 
