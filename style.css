@@ -181,6 +181,79 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
     transform: scale(1.1);
 }
 
+.ticker-title {
+    position: absolute;
+    bottom: 140px; 
+    width: 100%;
+    text-align: center;
+    font-size: 32px; 
+    color: rgba(255, 255, 255, 0.1); 
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    letter-spacing: 4px;
+    /* pointer-events: none; */
+    user-select: none;
+    z-index: 2;
+} 
+
+.ticker-title:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: 0.3s ease;
+}  
+
+.skill-ticker {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: #111;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+    z-index: 3;
+}
+
+.ticker-content {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 60s linear infinite;
+}
+
+.ticker-group {
+    display: flex;
+    white-space: nowrap;
+}
+
+.ticker-group span {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 25px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.ticker-group span i {
+    margin-right: 8px;
+    color: rgb(0, 183, 255);
+    font-size: 18px;
+}
+
+.ticker-content:hover {
+    animation-play-state: paused;
+    cursor: default;
+}  
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* -----------------about---------------------- */
 
 #about{
