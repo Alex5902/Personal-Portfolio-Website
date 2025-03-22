@@ -160,7 +160,7 @@
           <!-- Intro Tab -->
           <div class="section-card tab-content active" id="intro">
             <div class="about-card">
-              <img src="images\aboutme2.jpg" class="profile-pic" alt="Profile Picture">
+              <img src="images\kimono_me.jpg" class="profile-pic" alt="Profile Picture" onclick="showFullImage(this.src)">
               <div class="bio">
                 <h2>Hello, I'm Alex</h2>
                 <p>
@@ -179,7 +179,7 @@
         <!-- Skills Tab -->
         <div class="section-card tab-content" id="skills">
         <div class="card-layout">
-            <img src="images/skills.png" alt="Skills Icon" class="card-icon">
+            <img src="images/taiwan.jpg" alt="Skills Icon" class="card-icon" onclick="showFullImage(this.src)">
             <div class="card-content">
             <h2><i class="fa-solid fa-lightbulb"></i> Soft Skills in Action</h2>
 
@@ -218,7 +218,7 @@
           <!-- Experience Tab -->
           <div class="section-card tab-content" id="experience">
             <div class="card-layout">
-              <img src="images/experience.png" alt="Experience Icon" class="card-icon">
+              <img src="images/peel-lab.JPG" alt="Experience Icon" class="card-icon" onclick="showFullImage(this.src)">
               <div class="card-content">
                 <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
       
@@ -256,7 +256,7 @@
           <!-- Education Tab -->
           <div class="section-card tab-content" id="education">
             <div class="card-layout">
-              <img src="images/education.png" alt="Education Icon" class="card-icon">
+              <img src="images/tohoku_snow.jpg" alt="Education Icon" class="card-icon" onclick="showFullImage(this.src)">
               <div class="card-content">
                 <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
       
@@ -273,8 +273,12 @@
             </div>
           </div>
       
-        </div> <!-- end container -->
+        </div> 
       </section>      
+
+      <div id="imageModal" onclick="hideModal()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:1000;">
+        <img id="modalImage" style="max-width:90%; max-height:90%; border-radius:10px;">
+      </div>
       
     <!-- -----------------projects------------------- -->
     <div id="projects">
