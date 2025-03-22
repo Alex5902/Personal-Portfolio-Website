@@ -145,53 +145,137 @@
     </div>      
                       
     <!-- ------------about----------- -->
-    <div id="about">
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/aboutme2.jpg" width="300" height="auto">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <div class="myinfobox">
-                        <div class="myinfo">
-                            <p>Hello there! I'm Alex from London, England.<br><br>I'm a 4th-year engineering student currently studying at Japan's famous Tohoku University.</p>
-                        </div>
-                        <div class="myinfo">
-                            <p>I aspire to become a software engineer and continue to expand my skill set.</p>
-                            <br>
-                            <p>My hobbies include going to the gym, taekwondo, table tennis and badminton.</p>
-                        </div>
-                    </div>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab(event,'education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>Problem Solving</span><br><br>This skill was best shown in my flashcard project where I tackled a broad set of functionalities. I broke down complex problems into manageable subtasks, which allowed me to then systematically integrate each solution and build a fully functional website.</li>
-                                <li><span>Communication</span><br><br>Through writing articles and teaching English, I have learnt to articulate and communicate my ideas effectively adjusting to the audience as needed.</li>
-                                <!-- <li><span>Work Ethic</span><br><br>While working part-time 14 hours a week, kick boxing 4 hours a week, playing badminton 4 hours a week, running 3 hours a week and going to the gym 9 hours a week, I have still been able to keep up with my studies as well as any extra programming I do on the side.</li> -->
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>Junior Researcher (2023 - present)</span><br><br>Creating a GUI to automate the data processing and model creation of complex vector fluid flow from the bladder through collected datasets in MATLAB.</li>
-                                <li><span>English Teacher (2023 - present)</span><br><br>Teaching English to Japanese kids and adults of ages between 8 and 60+ at an English school in Japan.</li>
-                                <!-- <li><span>National Taipei Tech University PBL Competition (2023 Aug)</span><br><br>Designed and created robots that could identify and catch different coloured balls and throw them outside the desginated arena through the use of an arduino.</li> -->
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>Tohoku University, Japan (2021 - 2025)</span><br><br>BEng in Mechanical and Aerospace Engineering</li>
-                                <li><span>King's London Maths School, UK (2019 - 2021)</span><br><br>A-Levels: Maths, Further Maths, Physics, Computer Science - A*AAA</li>
-                            </ul>
-                        </div>
-                </div>
+          <h1 class="subtitle">About Me</h1>
+      
+          <!-- Tab Navigation -->
+          <div class="about-tabs">
+            <button class="tab-button active" data-tab="intro">About Me</button>
+            <button class="tab-button" data-tab="skills">Skills</button>
+            <button class="tab-button" data-tab="experience">Experience</button>
+            <button class="tab-button" data-tab="education">Education</button>
+          </div>
+      
+          <!-- Intro Tab -->
+          <div class="section-card tab-content active" id="intro">
+            <div class="about-card">
+              <img src="images\aboutme2.jpg" class="profile-pic" alt="Profile Picture">
+              <div class="bio">
+                <h2>Hello, I'm Alex</h2>
+                <p>
+                  I'm a 4th-year Mechanical and Aerospace Engineering student at Japan's Tohoku University, with a strong passion for software engineering and systems thinking.
+                </p>
+                <p>
+                  I enjoy building clean, functional software — especially backend-heavy apps with real-world applications, from SRS flashcard systems to crypto arbitrage bots.
+                </p>
+                <p>
+                  Beyond the keyboard, I keep disciplined through kick-boxing, powerlifting and badminton. I enjoy fast-paced environments and love turning complex problems into elegant solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+      
+        <!-- Skills Tab -->
+        <div class="section-card tab-content" id="skills">
+        <div class="card-layout">
+            <img src="images/skills.png" alt="Skills Icon" class="card-icon">
+            <div class="card-content">
+            <h2><i class="fa-solid fa-lightbulb"></i> Soft Skills in Action</h2>
+
+            <div class="card-entry">
+                <h3>Communication</h3>
+                <p>
+                Through teaching English to a wide age range and writing technical articles, I've learned to explain ideas clearly, adjust to the audience and stay calm when things get lost in translation — literally and figuratively.
+                </p>
+            </div>
+
+            <div class="card-entry">
+                <h3>Teamwork</h3>
+                <p>
+                During my internship at KGT Group, I collaborated with a multicultural team to conduct market research and present an expansion proposal. I actively contributed ideas and adapted quickly to shifting team priorities.
+                </p>
+            </div>
+
+            <div class="card-entry">
+                <h3>Work Ethic</h3>
+                <p>
+                Between research, part-time teaching, kick-boxing, and personal coding projects, I've learned how to manage my time, prioritise under pressure and still deliver consistently.
+                </p>
+            </div>
+
+            <div class="card-entry">
+                <h3>Adaptability</h3>
+                <p>
+                From building robots in a short-term competition in Taiwan to switching from MATLAB to full-stack JavaScript, I've shown I can learn fast and thrive in new technical and cultural environments.
+                </p>
+            </div>
+
             </div>
         </div>
-    </div>
+        </div>
+      
+          <!-- Experience Tab -->
+          <div class="section-card tab-content" id="experience">
+            <div class="card-layout">
+              <img src="images/experience.png" alt="Experience Icon" class="card-icon">
+              <div class="card-content">
+                <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+      
+                <div class="card-entry">
+                  <h3>English Teacher <span>(Oct 2023 – Present)</span></h3>
+                  <p>
+                    I've taught students aged 8 to 60+, designing lessons that mix structured grammar with natural conversation. It's taught me patience, adaptability, and how to explain complex ideas in a way that sticks — valuable skills in any software team.
+                  </p>
+                </div>
+      
+                <div class="card-entry">
+                  <h3>Business Intern, KGT Group <span>(Aug 2024 – Nov 2024)</span></h3>
+                  <p>
+                    Contributed to market analysis and international expansion strategy for a sustainable material startup. Led competitor research and helped develop a joint venture proposal targeting the German automotive sector. Collaborated with a diverse team to present the expansion plan at a business case competition.
+                  </p>
+                </div>
+      
+                <div class="card-entry">
+                  <h3>Junior Researcher <span>(Oct 2023 – Sep 2024)</span></h3>
+                  <p>
+                    I developed a GUI in MATLAB to automate data analysis and model creation of complex vector fluid flow through the human bladder. The tool simplified workflows that previously required raw code edits — improving both speed and accuracy for clinical researchers.
+                  </p>
+                </div>
+      
+                <div class="card-entry">
+                  <h3>PBL Robotics Competition, Taipei Tech <span>(Aug 2023)</span></h3>
+                  <p>
+                    Built an Arduino-based robot capable of autonomously identifying and sorting colored balls using basic computer vision. Led team presentations to judges and over 100 attendees, translating technical goals into a compelling, well-received narrative.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Education Tab -->
+          <div class="section-card tab-content" id="education">
+            <div class="card-layout">
+              <img src="images/education.png" alt="Education Icon" class="card-icon">
+              <div class="card-content">
+                <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      
+                <div class="card-entry">
+                  <h3>Tohoku University, Japan <span>(2021 – 2025)</span></h3>
+                  <p>BEng in Mechanical and Aerospace Engineering</p>
+                </div>
+      
+                <div class="card-entry">
+                  <h3>King's London Maths School, UK <span>(2019 – 2021)</span></h3>
+                  <p>A-Levels: Maths, Further Maths, Physics, Computer Science – A*AAA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div> <!-- end container -->
+      </section>      
+      
     <!-- -----------------projects------------------- -->
     <div id="projects">
         <div class="container">

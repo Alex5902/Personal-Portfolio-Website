@@ -256,44 +256,167 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
 
 /* -----------------about---------------------- */
 
-#about{
-    padding: 70px 0;
-    color: #dfdfdf;
-    /* color: #fff; */
+.about-section {
+  padding: 60px 0;
 }
 
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
 }
 
-/* new */
-.myinfobox {
-    display: flex;
-    justify-content: space-between;
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(0, 183, 255);
 }
 
-/* new */
-.myinfo {
-    background: #262626;
-    font-size: 16px;
-    padding: 15px;
-    border-radius: 10px;
-    width: 48%;
+.bio h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: rgb(0, 183, 255);
 }
 
-.about-col-1{
-    flex-basis: 35%;
+.section-card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
 }
 
-.about-col-1 img{
-    width: 100%;
-    border-radius: 15px;
+.section-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: rgb(0, 183, 255);
 }
 
-.about-col-2{
-    flex-basis: 60%;
+.card-entry h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.card-entry h3 span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #aaa;
+}
+
+.card-entry p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #dfdfdf;
+  margin-bottom: 20px;
+  max-width: 900px;
+}
+
+.bio p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}  
+
+.bio {
+    max-width: 900px;
+}  
+
+.about-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0 30px;
+}
+
+.tab-button {
+  background: #111;
+  border: 2px solid rgb(0, 183, 255);
+  color: rgb(0, 183, 255);
+  padding: 12px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.tab-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0, 183, 255, 0.4);
+}
+
+.tab-button:hover,
+.tab-button.active {
+  background: rgb(0, 183, 255);
+  color: #000;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.card-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card-icon {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid rgb(0, 183, 255);
+}
+
+.card-content {
+  flex: 1;
+  max-width: 900px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-icon {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card-content {
+    text-align: left;
+    padding-top: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .subtitle{
@@ -301,73 +424,6 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
     font-size: 60px;
     font-weight: 500;
     color: #fff;
-}
-
-.tab-titles{
-    display: flex;
-    margin: 5px 0 20px; /* 20px top margin, 0px right and left margin and 40px bottom margin */
-}
-
-.tab-links{
-    color: #fff;
-    padding: 5px 5px;
-    margin: 20px 70px;
-    font-size: 24px;
-    font-weight: 500;
-    border-radius: 6px;
-    cursor: pointer;
-    position: relative;
-    transition: transform 0.5s;
-}
-
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: rgb(0, 183, 255);
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-
-/* new */
-.tab-links:hover{
-    transform: scale(1.1);
-}
-
-/* new */
-.tab-links.active-link:hover{
-    transform: none;
-}
-
-.tab-links.active-link::after{
-    width: 100%;
-}
-
-.tab-links.active-link::after{
-    background: rgb(0, 183, 255);
-}
-
-.tab-contents ul li{
-    list-style: none;
-    margin: 20px 0;
-    font-size: 16px;
-    color: #fff;
-}
-
-.tab-contents ul li span{
-    color: rgb(0, 183, 255);
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.tab-contents{
-    display: none;
-}
-
-.tab-contents.active-tab{
-    display: block;
 }
 
 /* -----------projects------------ */
@@ -1372,14 +1428,14 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 1024px) {
-    .ticker-title .fa-solid{
+    .ticker-title{
         font-size: 24px;
         bottom: 160px;
     }
   }
 
 @media only screen and (max-width: 600px) {
-    .ticker-title .fa-solid{
+    .ticker-title{
         font-size: 20px;
         bottom: 140px;
         letter-spacing: 2px;

@@ -21,6 +21,16 @@ const closemenu = () => {
     sidemenu.style.right = '-200px';
 }
 
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+  
+      button.classList.add('active');
+      document.getElementById(button.dataset.tab).classList.add('active');
+    });
+  });
+
 // google sheets form
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzaJd7x9XZB0vMD7q6ooZfuz8iFeRNKHrRX-bO0WzgveIPNCHjUc3o15z5ehDPRKF9Euw/exec'
 const form = document.forms['submit-to-google-sheet']
