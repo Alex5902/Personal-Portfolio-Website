@@ -448,10 +448,14 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
     text-align: left;
     padding-top: 10px;
   }
-
   
   .bio {
     padding-top: 15px;
+  }
+
+  .ticker-title {
+    font-size: 24px;
+    bottom: 100px;
   }
 }
 
@@ -483,6 +487,7 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   font-weight: 500;
   color: #fff;
   text-align: center;
+  margin-top: 20px;
 }
 
 /* Modal */
@@ -1432,6 +1437,16 @@ nav .fa-solid{
         font-size: 32px;
     }
 
+    .ticker-title{
+        font-size: 20px;
+        bottom: 120px;
+        letter-spacing: 2px;
+    }
+
+  .skill-ticker {
+    bottom: 60px;
+  }
+
 /* -----------------------projects------------------ */
 
     #projects{
@@ -1494,14 +1509,22 @@ nav .fa-solid{
 @media only screen and (max-width: 1024px) {
     .ticker-title{
         font-size: 24px;
-        bottom: 160px;
+        bottom: 80px;
     }
+
+    .skill-ticker {
+        bottom: 25px;
+      }
   }
 
 @media only screen and (max-width: 600px) {
     .ticker-title{
         font-size: 20px;
-        bottom: 140px;
+        bottom: 120px;
         letter-spacing: 2px;
+    }
+
+  .skill-ticker {
+    bottom: 70px;
   }
 }
