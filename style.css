@@ -255,7 +255,6 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
 }
 
 /* -----------------about---------------------- */
-
 .about-section {
   padding: 60px 0;
 }
@@ -268,6 +267,7 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   border-radius: 20px;
   padding: 30px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
@@ -276,6 +276,13 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid rgb(0, 183, 255);
+  /* flex-shrink: 0; */
+  aspect-ratio: 1 / 1;
+}
+
+.bio {
+  max-width: 900px;
+  flex: 1;
 }
 
 .bio h2 {
@@ -284,6 +291,14 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   color: rgb(0, 183, 255);
 }
 
+.bio p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #dfdfdf;
+  font-size: 16px;
+}
+
+/* Section Card */
 .section-card {
   background: #1a1a1a;
   border-radius: 20px;
@@ -297,6 +312,7 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   color: rgb(0, 183, 255);
 }
 
+/* Entries */
 .card-entry h3 {
   font-size: 20px;
   margin-bottom: 5px;
@@ -317,20 +333,13 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   max-width: 900px;
 }
 
-.bio p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-}  
-
-.bio {
-  max-width: 900px;
-}  
-
+/* Tab Buttons */
 .about-tabs {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin: 20px 0 30px;
+  flex-wrap: wrap;
 }
 
 .tab-button {
@@ -356,6 +365,7 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   color: #000;
 }
 
+/* Tab Content */
 .tab-content {
   display: none;
   animation: fadeIn 0.6s ease-in-out;
@@ -365,11 +375,21 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   display: block;
 }
 
+/* Cards with image + text side by side */
 .card-layout {
   display: flex;
   align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+.card-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  max-width: 100%;
 }
 
 .card-icon {
@@ -380,21 +400,6 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   border: 3px solid rgb(0, 183, 255);
 }
 
-.card-content {
-  flex: 1;
-  max-width: 900px;
-}
-
-.card-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* height: 180px; */
-  width: 180px;
-  text-align: center;
-}
-
 .image-caption {
   font-size: 14px;
   color: #aaa;
@@ -402,10 +407,28 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   font-style: italic;
   line-height: 1.4;
   max-width: 160px;
-  text-align: center;
 }
 
+/* Card text */
+.card-content {
+  flex: 1;
+  max-width: 900px;
+}
+
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+
   .card-layout {
     flex-direction: column;
     align-items: center;
@@ -417,36 +440,52 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
     height: 140px;
   }
 
+  .image-caption {
+    max-width: 100%;
+  }
+
   .card-content {
     text-align: left;
     padding-top: 10px;
   }
-}
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media screen and (max-width: 768px) {
-  .about-card {
-    flex-direction: column;
-    text-align: center;
+  
+  .bio {
+    padding-top: 15px;
   }
+}
+
+@media screen and (max-width: 426px) {
   .profile-pic {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
+    /* object-fit: cover; */
+  }
+
+  .bio h2 {
+    font-size: 24px;
+  }
+
+  .bio p {
+    font-size: 14px;
+  }
+
+  .image-caption {
+    font-size: 13px;
+    max-width: 140px;
   }
 }
 
-.subtitle{
-    margin-bottom: 25px;
-    font-size: 60px;
-    font-weight: 500;
-    color: #fff;
+/* Subtitle */
+.subtitle {
+  margin-bottom: 25px;
+  font-size: 60px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
 }
 
-/* Modal overlay */
+/* Modal */
 #imageModal {
   display: none;
   position: fixed;
@@ -461,7 +500,6 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   cursor: zoom-out;
 }
 
-/* Modal image animation */
 #modalImage {
   max-width: 90%;
   max-height: 90%;
@@ -471,13 +509,12 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
   animation: zoomIn 0.3s ease forwards;
 }
 
-/* Fade background in */
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-/* Smooth zoom image effect */
 @keyframes zoomIn {
   from {
     transform: scale(0.9);
@@ -492,6 +529,7 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
 #modalImage.show {
   animation: zoomIn 0.3s ease forwards;
 }
+
 
 /* -----------projects------------ */
 
@@ -1392,47 +1430,6 @@ nav .fa-solid{
 
     .stats i{
         font-size: 32px;
-    }
-
-/* --------------------------------about me------------------------------ */
-    #about{
-        padding: 70px 0 10px;
-    }
-
-    #about img{
-        width: 100%;
-        padding: 40px 0;
-    }
-
-    .subtitle{
-        font-size: 40px;
-    }
-    .about-col-1, .about-col-2{
-        flex-basis: 100%;
-    }
-    .about-col-1{
-        margin-bottom: 30px;
-    }
-    .about-col-2{
-        font-size: 14px;
-        width: 50%;
-    }
-
-    .myinfobox p{
-        font-size: 15px;
-    }
-
-    .tab-links{
-        font-size: 18px;
-        margin: 10px 6%;
-    }
-
-    .tab-contents ul li{
-        font-size: 15px;
-    }
-
-    .tab-contents ul li span{
-        font-size: 20px;
     }
 
 /* -----------------------projects------------------ */
