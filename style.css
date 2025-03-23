@@ -453,10 +453,10 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
     padding-top: 15px;
   }
 
-  .ticker-title {
+  /* .ticker-title {
     font-size: 24px;
     bottom: 100px;
-  }
+  }*/
 }
 
 @media screen and (max-width: 426px) {
@@ -1437,7 +1437,7 @@ nav .fa-solid{
         font-size: 32px;
     }
 
-    .ticker-title{
+    /* .ticker-title{
         font-size: 20px;
         bottom: 120px;
         letter-spacing: 2px;
@@ -1445,7 +1445,7 @@ nav .fa-solid{
 
   .skill-ticker {
     bottom: 60px;
-  }
+  } */
 
 /* -----------------------projects------------------ */
 
@@ -1516,20 +1516,20 @@ nav .fa-solid{
         bottom: 25px;
       }
   }
-
+/* 
 @media only screen and (max-width: 600px) {
     .ticker-title{
         font-size: 20px;
-        bottom: 120px;
+        bottom: 170px;
         letter-spacing: 2px;
     }
 
   .skill-ticker {
-    bottom: 70px;
+    bottom: 100px;
   }
-}
+} */
 
-@media only screen and (min-width: 345px) and (max-width: 375px) {
+/* @media only screen and (min-width: 345px) and (max-width: 375px) {
     .ticker-title{
         font-size: 20px;
         bottom: 150px;
@@ -1539,9 +1539,9 @@ nav .fa-solid{
   .skill-ticker {
     bottom: 90px;
   }
-}
+} */
 
-@media only screen and (min-width: 420px) and (max-width: 450px) {
+/* @media only screen and (min-width: 420px) and (max-width: 450px) {
     .ticker-title{
         font-size: 20px;
         bottom: 100px;
@@ -1551,4 +1551,21 @@ nav .fa-solid{
   .skill-ticker {
     bottom: 50px;
   }
+} */
+
+@media only screen and (max-width: 768px) {
+    .ticker-title {
+        position: relative; /* removes absolute */
+        bottom: auto;       /* resets bottom property */
+        margin-top: 30px;   /* spacing after stats */
+        font-size: 24px;
+    }
+
+    .skill-ticker {
+        position: relative; /* removes absolute */
+        bottom: auto;
+        margin-top: 10px;  /* spacing after ticker title */
+        margin-bottom: 30px; /* spacing below ticker */
+    }
 }
+
