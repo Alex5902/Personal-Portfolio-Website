@@ -39,6 +39,14 @@ function hideModal() {
     document.getElementById("imageModal").style.display = "none";
 }
 
+function openCVModal() {
+    document.getElementById('cvModal').style.display = 'block';
+}
+
+function closeCVModal() {
+    document.getElementById('cvModal').style.display = 'none';
+}
+
 // google sheets form
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzaJd7x9XZB0vMD7q6ooZfuz8iFeRNKHrRX-bO0WzgveIPNCHjUc3o15z5ehDPRKF9Euw/exec'
 const form = document.forms['submit-to-google-sheet']
