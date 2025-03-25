@@ -823,9 +823,11 @@ form .btn2 {
     width: 150px;
     height: 200px;
     border: 1px solid #ccc;
-    flex-shrink: 0;
-}
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+  
 .cv-caption {
     font-size: 12px;
     color: #ccc;
@@ -1672,11 +1674,11 @@ nav .fa-solid{
         background: rgb(0, 183, 255);
         padding: 10px 15px;
         font-size: 16px;
-        color: white;
+        color: white !important;  
         border: none;
         border-radius: 6px;
         text-align: center;
-        text-decoration: none;
+        text-decoration: none !important;
         transition: background 0.3s;
         margin: 10px auto 20px;
       }
