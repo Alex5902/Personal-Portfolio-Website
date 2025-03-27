@@ -58,6 +58,15 @@ nav ul li a{
     position: relative;
 }
 
+nav a img.logo {
+    display: block; /* removes extra spacing below image */
+}
+  
+nav a.logo-link {
+    display: inline-block;
+    width: auto;
+}  
+
 /* create a blue line under each link */
 nav ul li a::after{ /* :: pseudo-element let's you style a specific part of a selected element */
     content: '';
