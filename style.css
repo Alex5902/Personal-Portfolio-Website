@@ -151,6 +151,7 @@ nav ul li a:hover::after{ /* : psuedo-class, as if you had added a class for tha
     position: relative;
     z-index: 2;
     object-fit: cover;
+    border: 3px solid rgb(0, 183, 255);
 }
 
 /* new */
